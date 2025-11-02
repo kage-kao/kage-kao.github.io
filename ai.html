@@ -1,158 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI</title>
   <style>
     :root{
-      --bg:#f6f3ef;
-      --card:#fff;
-      --accent:#2b2b1f;
-      --muted:#7a756b;
-      --line:#e6e0d8;
-      --serif:"Libre Baskerville", "Georgia", serif;
-      --sans:"Helvetica Neue", Arial, sans-serif;
+      --bg-1: #c9f0d7;
+      --bg-2: #a0e6c2;
+      --accent: #2d5a3d;
+      --button-bg: rgba(255,255,255,0.85);
+      --button-bg-hover: #9bd9b0;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
+    html,body{
+      height:100%;
       margin:0;
-      font-family:var(--sans);
-      background:linear-gradient(180deg,var(--bg),#f2efe9);
-      color:var(--accent);
-      padding:48px 20px;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body {
+      background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      font-family: "Georgia", serif;
+      padding: 80px 16px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:20px;
+    }
+    .organic-nav{
       display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      justify-content:center;
+      align-items:center;
+      padding:24px;
+    }
+    .organic-nav a{
+      display:inline-flex;
       align-items:center;
       justify-content:center;
-    }
-    .card{
-      width:min(720px,94vw);
-      background:var(--card);
-      border:1px solid var(--line);
-      box-shadow:0 8px 30px rgba(30,30,20,0.06);
-      border-radius:10px;
-      padding:36px 44px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    header{display:block;margin-bottom:18px}
-    
-    /* --- ИЗМЕНЕНИЕ ЗДЕСЬ --- */
-    h1{
-      margin:0;
-      font-family:var(--serif);
-      font-size:24px;
-      letter-spacing:0.12em;
-      color:var(--accent);
-      text-align: center; /* Добавил это свойство */
-    }
-
-    hr.sep{border:none;border-top:1px solid var(--line);margin:20px 0}
-    
-    .links{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      gap:10px;
-    }
-    .links li {
-      background:linear-gradient(180deg, rgba(240,238,234,0.6), rgba(255,255,255,0.4));
-      border-radius:8px;
-      border:1px solid rgba(0,0,0,0.03);
-      transition:transform .12s ease,box-shadow .12s ease;
-    }
-    .links li:hover{
-      transform:translateY(-4px);
-      box-shadow:0 10px 22px rgba(30,30,18,0.06);
-    }
-
-    .links a {
-      display:flex;
-      align-items:center;
-      width: 100%;
-      padding:14px 16px;
-      text-decoration: none;
-      color: inherit;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .name{
-      display:flex;
-      gap:14px;
-      align-items:center;
+      min-width:110px;
+      padding:12px 26px;
+      color: var(--accent);
+      text-decoration:none;
+      background: var(--button-bg);
+      border-radius:999px;
+      border:2px solid rgba(160,230,194,0.9);
+      box-shadow:0 4px 12px rgba(45,90,61,0.08);
+      position:relative;
+      overflow:hidden;
+      transition: transform .32s ease, background .32s ease, box-shadow .32s ease, border-color .32s ease;
       font-weight:600;
-      font-size:15px;
-      font-family:var(--serif);
-      text-transform:capitalize;
+      letter-spacing:0.2px;
     }
-    
-    @media (max-width:520px){.card{padding:20px}}
+    .organic-nav a::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-120%;
+      width:40%;
+      height:100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+      transform: skewX(-20deg);
+      transition: left .6s cubic-bezier(.2,.9,.3,1);
+      pointer-events:none;
+    }
+    .organic-nav a:hover::before{
+      left:120%;
+    }
+    .organic-nav a:hover{
+      transform: translateY(-4px) scale(1.03);
+      background: var(--button-bg-hover);
+      box-shadow:0 12px 30px rgba(45,90,61,0.18);
+      border-color: var(--accent);
+      color: #08321a;
+    }
+    * { -webkit-tap-highlight-color: transparent; }
+    ::selection { background: rgba(160,230,194,0.0); color: inherit; }
+    a, button, input, textarea { outline: none; }
+    a:focus, button:focus, input:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px rgba(45,90,61,0.08); }
+    .organic-nav a:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(45,90,61,0.12); outline-offset:4px; }
+    @media (max-width:480px){
+      body { padding: 20px 16px; }
+      .organic-nav{ gap:12px; padding:18px; }
+      .organic-nav a{ padding:10px 18px; min-width:90px; font-size:15px; }
+    }
   </style>
 </head>
 <body>
-  <main class="card" role="main">
-    <header><h1>AI</h1></header>
-    <hr class="sep" />
-    <ul class="links" aria-label="AI links">
-      <li>
-        <a href="https://venice.ai/" target="_blank" rel="noopener noreferrer">
-          <div class="name">AI без цензуры</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">
-          <div class="name">AiStudio</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
-          <div class="name">ChatGPT</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">
-          <div class="name">Claude</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://chat.mistral.ai/" target="_blank" rel="noopener noreferrer">
-          <div class="name">Mistral</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.meta.ai/" target="_blank" rel="noopener noreferrer">
-          <div class="name">LLaMA</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">
-          <div class="name">Kimi</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://chat.qwenlm.ai/" target="_blank" rel="noopener noreferrer">
-          <div class="name">Qwen</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="http://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">
-          <div class="name">DeepSeek</div>
-        </a>
-      </li>
-    </ul>
-  </main>
-
+  <div class="container">
+    <nav class="organic-nav" aria-label="AI links">
+      <a href="https://venice.ai/" target="_blank" rel="noopener noreferrer">AI без цензуры</a>
+      <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">AiStudio</a>
+      <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a>
+      <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a>
+      <a href="https://chat.mistral.ai/" target="_blank" rel="noopener noreferrer">Mistral</a>
+      <a href="https://www.meta.ai/" target="_blank" rel="noopener noreferrer">LLaMA</a>
+      <a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi</a>
+      <a href="https://chat.qwenlm.ai/" target="_blank" rel="noopener noreferrer">Qwen</a>
+      <a href="http://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek</a>
+    </nav>
+  </div>
 </body>
 </html>

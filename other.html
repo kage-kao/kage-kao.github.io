@@ -4,88 +4,146 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Инструменты</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --text: #e5e5e5;
-    --gap: 10px;
-    --radius: 6px;
-    --maxw: 1140px;
-    
-    /* Цвета для текста при наведении */
-    --c1: #60a5fa; --c2: #fb923c; --c3: #4ade80; --c4: #c084fc;
-    --c5: #f87171; --c6: #facc15; --c7: #2dd4bf; --c8: #f472b6;
-    --c9: #94a3b8; --c10: #a3e635;
+  :root{
+    --bg-1: #c9f0d7;
+    --bg-2: #a0e6c2;
+    --accent: #2d5a3d;
+    --button-bg: rgba(255,255,255,0.85);
+    --button-bg-hover: #9bd9b0;
   }
-  * { box-sizing: border-box; }
-  body {
-    background: #000;
-    color: var(--text);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    margin: 0;
-    padding: var(--gap);
-    min-height: 100vh;
-  }
-  .wrap {
-    width: 100%;
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: var(--gap);
-  }
-  a.card {
-    background: #121212;
-    border: 1px solid #222;
-    border-radius: var(--radius);
-    padding: 16px 12px;
-    min-height: 50px;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease-in-out;
-  }
-  a.card:hover {
-    transform: translateY(-3px);
-    border-color: #444;
-  }
-  
-  /* Меняем цвет текста при наведении */
-  .c1:hover { color: var(--c1); }
-  .c2:hover { color: var(--c2); }
-  .c3:hover { color: var(--c3); }
-  .c4:hover { color: var(--c4); }
-  .c5:hover { color: var(--c5); }
-  .c6:hover { color: var(--c6); }
-  .c7:hover { color: var(--c7); }
-  .c8:hover { color: var(--c8); }
-  .c9:hover { color: var(--c9); }
-  .c10:hover{ color: var(--c10); }
 
+  html,body{
+    height:100%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  body {
+    background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+    font-family: "Georgia", serif;
+    padding: 80px 16px;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color: var(--accent);
+  }
+
+  .container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:20px;
+  }
+
+  /* --- ИЗМЕНЕНИЯ ТОЛЬКО ЗДЕСЬ --- */
+  .organic-nav{
+    display: grid; /* 1. Меняем flex на grid */
+    grid-template-columns: repeat(5, 1fr); /* 2. Создаем 5 колонок */
+    gap: 16px;
+    padding: 24px;
+    /* Свойства flexbox (flex-wrap, justify-content, align-items) больше не нужны для основной раскладки */
+  }
+
+  .organic-nav a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:110px;
+    padding:12px 26px;
+    color: var(--accent);
+    text-decoration:none;
+    background: var(--button-bg);
+    border-radius:999px;
+    border:2px solid rgba(160,230,194,0.9);
+    box-shadow:0 4px 12px rgba(45,90,61,0.08);
+    position:relative;
+    overflow:hidden;
+    transition: transform .32s ease, background .32s ease, box-shadow .32s ease, border-color .32s ease;
+    font-weight:600;
+    letter-spacing:0.2px;
+  }
+
+  /* подсвечивающий скользящий градиент */
+  .organic-nav a::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:40%;
+    height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    transform: skewX(-20deg);
+    transition: left .6s cubic-bezier(.2,.9,.3,1);
+    pointer-events:none;
+  }
+
+  .organic-nav a:hover::before{
+    left:120%;
+  }
+
+  .organic-nav a:hover{
+    transform: translateY(-4px) scale(1.03);
+    background: var(--button-bg-hover);
+    box-shadow:0 12px 30px rgba(45,90,61,0.18);
+    border-color: var(--accent);
+    color: #08321a;
+  }
+
+  /* Убираем синюю подсветку/фокус при клике, тапе и при копировании */
+  a, button, input, textarea {
+    outline: none;
+  }
+  a:focus, button:focus, input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45,90,61,0.08); /* или установите none для полного удаления */
+  }
+  /* Убирает подсветку при тапе в мобильных WebKit */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* Настройка выделения текста при копировании */
+  ::selection {
+    background: rgba(160,230,194,0.0);
+    color: inherit;
+  }
+
+  /* доступность: видимый фокус для клавиатуры (альтернатива — убрать полностью) */
+  .organic-nav a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45,90,61,0.12);
+    outline-offset:4px;
+  }
+
+  /* адаптив */
+  @media (max-width:480px){
+    .organic-nav{
+      /* На мобильных можно сделать 2 колонки, чтобы не было слишком мелко */
+      grid-template-columns: repeat(2, 1fr);
+      gap:12px;
+      padding:18px;
+    }
+    .organic-nav a{
+      padding:10px 18px;
+      min-width:90px;
+      font-size:15px;
+    }
+  }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <main class="grid">
-      <a href="https://waifu2x.udp.jp/" target="_blank" rel="noopener" class="card c1">Улучшение фото</a>
-      <a href="https://pdf-to-png.vercel.app/" target="_blank" rel="noopener" class="card c2">PDF → PNG</a>
-      <a href="https://cloudconvert.com/m4a-to-mp3" target="_blank" rel="noopener" class="card c3">Конвертер аудио</a>
-      <a href="https://www.pixelcut.ai/ru/ai-image-editor?tool=removeBackground" target="_blank" rel="noopener" class="card c4">Удаление фона</a>
-      <a href="https://youtube-thumbnail-downloader.github.io/" target="_blank" rel="noopener" class="card c5">Обложка YouTube</a>
-      <a href="https://yt5s.biz/ru/" target="_blank" rel="noopener" class="card c6">Скачать видео</a>
-      <a href="https://ttsfree.com/text-to-speech/ru" target="_blank" rel="noopener" class="card c7">Текст → речь</a>
-      <a href="https://smailpro.com/temp-gmail" target="_blank" rel="noopener" class="card c8">Временная почта</a>
-      <a href="https://bridges.torproject.org/options" target="_blank" rel="noopener" class="card c9">Tor Bridges</a>
-      <a href="https://ru.savefrom.net/245lU/" target="_blank" rel="noopener" class="card c10">SaveFrom</a>
-    </main>
+  <div class="container">
+    <nav class="organic-nav" aria-label="Инструменты">
+      <a href="https://waifu2x.udp.jp/" target="_blank" rel="noopener">Улучшение фото</a>
+      <a href="https://pdf-to-png.vercel.app/" target="_blank" rel="noopener">PDF В PNG</a>
+      <a href="https://cloudconvert.com/m4a-to-mp3" target="_blank" rel="noopener">Конвертер аудио</a>
+      <a href="https://www.pixelcut.ai/ru/ai-image-editor?tool=removeBackground" target="_blank" rel="noopener">Удаление фона</a>
+      <a href="https://youtube-thumbnail-downloader.github.io/" target="_blank" rel="noopener">Обложка YouTube</a>
+      <a href="https://yt5s.biz/ru/" target="_blank" rel="noopener">Скачать видео</a>
+      <a href="https://ttsfree.com/text-to-speech/ru" target="_blank" rel="noopener">Текст в речь</a>
+      <a href="https://smailpro.com/temp-gmail" target="_blank" rel="noopener">Временная почта</a>
+      <a href="https://bridges.torproject.org/options" target="_blank" rel="noopener">Tor Bridges</a>
+      <a href="https://ru.savefrom.net/245lU/" target="_blank" rel="noopener">SaveFrom</a>
+    </nav>
   </div>
 </body>
 </html>
