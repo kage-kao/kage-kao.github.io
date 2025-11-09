@@ -4,212 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Лучшие файлообменники 🗃️</title>
-  <style>
-    :root{
-      --bg-1: #c9f0d7;
-      --bg-2: #a0e6c2;
-      --accent: #2d5a3d;
-      --accent-strong: #08321a;
-      --button-bg: rgba(255,255,255,0.85);
-      --button-bg-hover: #9bd9b0;
-      --card-border-color: rgba(160,230,194,0.9);
-      --shadow-color: rgba(45,90,61,0.08);
-      --shadow-color-hover: rgba(45,90,61,0.18);
-    }
-    
-    * { box-sizing: border-box; }
-
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: "Georgia", serif;
-      color: var(--accent);
-      background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    header {
-      padding: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .title {
-      font-size: 1.5em;
-      font-weight: 700;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .search {
-      margin-left: auto;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .search input, .search select {
-      background: var(--button-bg);
-      border: 2px solid var(--card-border-color);
-      color: var(--accent);
-      font-family: "Georgia", serif;
-      padding: 10px 14px;
-      border-radius: 999px;
-      outline: none;
-      transition: box-shadow .3s, border-color .3s;
-      box-shadow: 0 2px 8px var(--shadow-color);
-    }
-    .search input:focus, .search select:focus {
-      box-shadow: 0 4px 12px var(--shadow-color-hover);
-      border-color: var(--accent);
-    }
-    .search select{ cursor: pointer; }
-
-    main { max-width: 1100px; margin: 25px auto; padding: 0 20px 60px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
-    
-    .card {
-      background: var(--button-bg);
-      border: 2px solid var(--card-border-color);
-      box-shadow: 0 4px 12px var(--shadow-color);
-      padding: 18px;
-      border-radius: 24px;
-      transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      border-color: var(--accent);
-      box-shadow: 0 12px 30px var(--shadow-color-hover);
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 1.2em;
-      color: var(--accent-strong);
-      font-weight: 700;
-    }
-
-    .meta { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag {
-      background: rgba(45, 90, 61, 0.05);
-      color: var(--accent);
-      padding: 5px 12px;
-      font-size: 0.85em;
-      border-radius: 999px;
-    }
-    .tag strong { color: var(--accent-strong); font-weight: 700; }
-
-    .links { display: flex; gap: 10px; margin-top: auto; padding-top:10px; }
-    .btn {
-      flex-grow: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      font-family: "Georgia", serif;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-      text-decoration: none;
-      color: var(--accent);
-      background: var(--button-bg);
-      border: 2px solid var(--card-border-color);
-      border-radius: 999px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 12px var(--shadow-color);
-      transition: transform .32s ease, background .32s ease, box-shadow .32s ease, border-color .32s ease;
-    }
-
-    .btn::before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:-120%;
-      width:40%;
-      height:100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-      transform: skewX(-20deg);
-      transition: left .6s cubic-bezier(.2,.9,.3,1);
-      pointer-events:none;
-    }
-    .btn:hover::before{
-      left:120%;
-    }
-    .btn:hover {
-      transform: translateY(-4px) scale(1.03);
-      background: var(--button-bg-hover);
-      box-shadow:0 12px 30px var(--shadow-color-hover);
-      border-color: var(--accent);
-      color: var(--accent-strong);
-    }
-    
-    a, button, input, select, textarea {
-      outline: none;
-    }
-    a:focus, button:focus, input:focus, select:focus, textarea:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(45,90,61,0.08);
-    }
-    * {
-      -webkit-tap-highlight-color: transparent;
-    }
-    ::selection {
-      background: rgba(160,230,194,0.5);
-      color: inherit;
-    }
-    .btn:focus-visible, .search input:focus-visible, .search select:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(45,90,61,0.12);
-      outline-offset:4px;
-    }
-    .card:focus-visible {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 12px 30px var(--shadow-color-hover), 0 0 0 3px rgba(45,90,61,0.12);
-    }
-
-    #toast {
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 30px;
-      background: var(--button-bg);
-      border: 2px solid var(--accent);
-      color: var(--accent-strong);
-      padding: 12px 20px;
-      font-size: 0.9em;
-      display: none;
-      box-shadow: 0 8px 20px var(--shadow-color-hover);
-      z-index: 40;
-      border-radius: 999px;
-    }
-    
-    @media (max-width: 768px) {
-        header { 
-            flex-direction: column; 
-            gap: 20px; 
-            align-items: center; /* <-- ДОБАВЛЕНО ЭТО СВОЙСТВО */
-        }
-        .search { width: 100%; margin: 10px 0 0 0; }
-        .search input { flex-grow: 1; }
-        .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="filesharing-page">
   <header>
-    <div class="title">🗃️ <span>Лучшие файлообменники</span></div>
+    <div class="title">🗃️ <span>Файлообменники</span></div>
     <div class="search" role="search" aria-label="Фильтр файлообменников">
       <input id="q" type="search" placeholder="Поиск..." aria-label="Поиск">
       <select id="filter" aria-label="Фильтр">
@@ -223,12 +22,11 @@
 
   <main>
     <section id="grid" class="grid" aria-live="polite">
-      <article class="card" tabindex="0" data-name="wormhole" data-tags="до 10 ГБ,24 часа,100 скачиваний,temporary">
-        <h3>Wormhole</h3>
-        <div class="meta">
-          <span class="tag">временно</span>
-          <span class="tag"><strong>до 10 ГБ</strong></span>
-          <span class="tag">24 часа</span>
+      
+      <article class="card" tabindex="0" data-name="wormhole" data-tags="до 10 ГБ,24 часа,temporary">
+        <div class="card-content">
+          <h3>Wormhole</h3>
+          <div class="meta"><span class="tag">до 10 ГБ</span><span class="tag">24 часа</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://wormhole.app" target="_blank" rel="noopener">Открыть</a>
@@ -237,11 +35,9 @@
       </article>
 
       <article class="card" tabindex="0" data-name="catbox" data-tags="навсегда,до 200 МБ,прямая ссылка,permanent,direct">
-        <h3>Catbox</h3>
-        <div class="meta">
-          <span class="tag"><strong>навсегда</strong></span>
-          <span class="tag">до 200 МБ</span>
-          <span class="tag">прямая ссылка</span>
+        <div class="card-content">
+          <h3>Catbox</h3>
+          <div class="meta"><span class="tag">навсегда</span><span class="tag">до 200 МБ</span><span class="tag">прямая ссылка</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://catbox.moe" target="_blank" rel="noopener">Открыть</a>
@@ -250,25 +46,20 @@
       </article>
 
       <article class="card" tabindex="0" data-name="litterbox" data-tags="временно,до 1 ГБ,прямая ссылка,temporary,direct">
-        <h3>Litterbox</h3>
-        <div class="meta">
-          <span class="tag">временно</span>
-          <span class="tag"><strong>до 1 ГБ</strong></span>
-          <span class="tag">прямая ссылка</span>
+        <div class="card-content">
+          <h3>Litterbox</h3>
+          <div class="meta"><span class="tag">до 1 ГБ</span><span class="tag">прямая ссылка</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://litterbox.catbox.moe" target="_blank" rel="noopener">Открыть</a>
           <button class="btn copy" data-domain="https://litterbox.catbox.moe">Копировать</button>
         </div>
       </article>
-
+      
       <article class="card" tabindex="0" data-name="temp ilyxa05" data-tags="временно,до 2 ГБ,до 7 дней,temporary,direct">
-        <h3>Temp Ilyxa05</h3>
-        <div class="meta">
-          <span class="tag">временно</span>
-          <span class="tag"><strong>до 2 ГБ</strong></span>
-          <span class="tag">до 7 дней</span>
-          <span class="tag">прямая ссылка</span>
+        <div class="card-content">
+          <h3>Temp Ilyxa05</h3>
+          <div class="meta"><span class="tag">до 2 ГБ</span><span class="tag">до 7 дней</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://tempshare.su/" target="_blank" rel="noopener">Открыть</a>
@@ -277,11 +68,9 @@
       </article>
 
       <article class="card" tabindex="0" data-name="depot jirafeau" data-tags="1 год,прямая ссылка,temporary,direct">
-        <h3>Depot (Jirafeau)</h3>
-        <div class="meta">
-          <span class="tag">временно</span>
-          <span class="tag"><strong>до 1 года</strong></span>
-          <span class="tag">прямая ссылка</span>
+        <div class="card-content">
+          <h3>Depot (Jirafeau)</h3>
+          <div class="meta"><span class="tag">до 1 года</span><span class="tag">прямая ссылка</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://depot.autisme.ch" target="_blank" rel="noopener">Открыть</a>
@@ -290,24 +79,20 @@
       </article>
 
       <article class="card" tabindex="0" data-name="pomf lain" data-tags="навсегда,до 1 ГБ,прямая ссылка,permanent,direct">
-        <h3>Pomf (lain.la)</h3>
-        <div class="meta">
-          <span class="tag"><strong>навсегда</strong></span>
-          <span class="tag">до 1 ГБ</span>
-          <span class="tag">прямая ссылка</span>
+        <div class="card-content">
+          <h3>Pomf (lain.la)</h3>
+          <div class="meta"><span class="tag">навсегда</span><span class="tag">до 1 ГБ</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://pomf.lain.la" target="_blank" rel="noopener">Открыть</a>
           <button class="btn copy" data-domain="https://pomf.lain.la">Копировать</button>
         </div>
       </article>
-
-      <article class="card" tabindex="0" data-name="transfer it" data-tags="временно,до 90 дней,без ограничений по размеру,temporary">
-        <h3>Transfer.it</h3>
-        <div class="meta">
-          <span class="tag">временно</span>
-          <span class="tag"><strong>до 90 дней</strong></span>
-          <span class="tag">Без ограничений на размер файла</span>
+      
+      <article class="card" tabindex="0" data-name="transfer it" data-tags="временно,до 90 дней,temporary">
+        <div class="card-content">
+          <h3>Transfer.it</h3>
+          <div class="meta"><span class="tag">до 90 дней</span><span class="tag">без ограничений</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://transfer.it" target="_blank" rel="noopener">Открыть</a>
@@ -316,11 +101,9 @@
       </article>
 
       <article class="card" tabindex="0" data-name="gigafile" data-tags="временно,до 300 ГБ,100 дней,temporary">
-        <h3>Gigafile</h3>
-        <div class="meta">
-          <span class="tag">временно</span>
-          <span class="tag"><strong>до 300 ГБ</strong></span>
-          <span class="tag">100 дней</span>
+        <div class="card-content">
+          <h3>Gigafile</h3>
+          <div class="meta"><span class="tag">до 300 ГБ</span><span class="tag">100 дней</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://gigafile.nu/" target="_blank" rel="noopener">Открыть</a>
@@ -329,90 +112,76 @@
       </article>
 
       <article class="card" tabindex="0" data-name="wgetz" data-tags="навсегда,прямая ссылка,permanent,direct">
-        <h3>Wgetz</h3>
-        <div class="meta">
-          <span class="tag"><strong>навсегда</strong></span>
-          <span class="tag">прямая ссылка</span>
+        <div class="card-content">
+          <h3>Wgetz</h3>
+          <div class="meta"><span class="tag">навсегда</span><span class="tag">прямая ссылка</span></div>
         </div>
         <div class="links">
           <a class="btn open" href="https://wgetz.com/" target="_blank" rel="noopener">Открыть</a>
           <button class="btn copy" data-domain="https://wgetz.com/">Копировать</button>
         </div>
       </article>
+
     </section>
   </main>
 
-  <div id="toast" role="status" aria-live="polite"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+  
+<script>
+  // --- Фильтрация ---
+  const q = document.getElementById('q');
+  const filter = document.getElementById('filter');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  
+  function normalize(s) { return String(s || '').toLowerCase(); }
+  
+  function applyFilter() {
+    const term = normalize(q.value.trim());
+    const f = filter.value;
+    cards.forEach(card => {
+      const name = normalize(card.dataset.name);
+      const tags = normalize(card.dataset.tags);
+      const matchesTerm = !term || name.includes(term) || tags.includes(term);
+      const matchesFilter = (f === 'all') || tags.includes(f);
+      card.style.display = (matchesTerm && matchesFilter) ? 'flex' : 'none';
+    });
+  }
+  
+  q.addEventListener('input', applyFilter);
+  filter.addEventListener('change', applyFilter);
 
-  <script>
-    // Скрипт остается без изменений
-    function showToast(msg, ok = true){
-      const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.style.background = ok ? 'var(--button-bg)' : '#ffdddd';
-      t.style.borderColor = ok ? 'var(--accent)' : '#c91414';
-      t.style.display = 'block';
-      clearTimeout(t._timeout);
-      t._timeout = setTimeout(()=> t.style.display = 'none', 1800);
+  // --- Уведомление (Toast) и Копирование ---
+  const toast = document.getElementById('toast');
+  let toastTimeout;
+
+  function showToast(message, isError = false) {
+    clearTimeout(toastTimeout); // Сбросить предыдущий таймер, если есть
+    
+    toast.textContent = message;
+    toast.className = 'toast'; // Сбросить классы
+    if (isError) {
+      toast.classList.add('error');
     }
-    let lastTap = 0;
-    document.addEventListener('click', async (e)=>{
-      const now = Date.now();
-      if (now - lastTap < 200) return;
-      lastTap = now;
-      const cp = e.target.closest('.copy');
-      if(cp){
-        const url = cp.getAttribute('data-domain');
-        try{
-          await navigator.clipboard.writeText(url);
-          showToast('Скопировано: ' + url);
-        }catch(err){
-          const ta = document.createElement('textarea');
-          ta.value = url; ta.style.position='fixed'; ta.style.opacity=0;
-          document.body.appendChild(ta); ta.select();
-          try { document.execCommand('copy'); showToast('Скопировано: ' + url); }
-          catch(err2){ showToast('Не удалось скопировать', false); }
-          document.body.removeChild(ta);
-        }
-        return;
-      }
-      const open = e.target.closest('.open');
-      if(open) return;
-    });
-    const q = document.getElementById('q');
-    const filter = document.getElementById('filter');
-    const cards = Array.from(document.querySelectorAll('.card'));
-    function normalize(s){ return String(s || '').toLowerCase(); }
-    function applyFilter(){
-      const term = normalize(q.value.trim());
-      const f = filter.value;
-      let visible = 0;
-      cards.forEach(card=>{
-        const name = normalize(card.dataset.name);
-        const tags = normalize(card.dataset.tags);
-        const matchesTerm = !term || name.includes(term) || tags.includes(term);
-        const matchesFilter = (f === 'all') || tags.includes(f);
-        const show = matchesTerm && matchesFilter;
-        card.style.display = show ? '' : 'none';
-        if(show) visible++;
-      });
-      if(visible === 0){
-        document.getElementById('grid').setAttribute('aria-label', 'Ничего не найдено');
-      }else{
-        document.getElementById('grid').removeAttribute('aria-label');
+    toast.classList.add('show');
+    
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000); // Скрыть через 3 секунды
+  }
+
+  document.addEventListener('click', async (e) => {
+    const copyBtn = e.target.closest('.copy');
+    if (copyBtn) {
+      const url = copyBtn.getAttribute('data-domain');
+      try {
+        await navigator.clipboard.writeText(url);
+        showToast('Скопировано: ' + url);
+      } catch (err) {
+        showToast('Не удалось скопировать', true);
       }
     }
-    q.addEventListener('input', applyFilter);
-    filter.addEventListener('change', applyFilter);
-    document.querySelectorAll('.card').forEach(card=>{
-      card.addEventListener('keydown', (e)=>{
-        if(e.key === 'Enter'){
-          const link = card.querySelector('.open');
-          if(link) window.open(link.href, '_blank', 'noopener');
-        }
-      });
-    });
-    applyFilter();
-  </script>
+  });
+</script>
+
 </body>
 </html>

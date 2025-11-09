@@ -4,97 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI</title>
-  <style>
-    :root{
-      --bg-1: #c9f0d7;
-      --bg-2: #a0e6c2;
-      --accent: #2d5a3d;
-      --button-bg: rgba(255,255,255,0.85);
-      --button-bg-hover: #9bd9b0;
-    }
-    html,body{
-      height:100%;
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-    body {
-      background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
-      font-family: "Georgia", serif;
-      padding: 80px 16px;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .container{
-      max-width:1100px;
-      margin:0 auto;
-      padding:20px;
-    }
-    .organic-nav{
-      display:flex;
-      flex-wrap:wrap;
-      gap:16px;
-      justify-content:center;
-      align-items:center;
-      padding:24px;
-    }
-    .organic-nav a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:110px;
-      padding:12px 26px;
-      color: var(--accent);
-      text-decoration:none;
-      background: var(--button-bg);
-      border-radius:999px;
-      border:2px solid rgba(160,230,194,0.9);
-      box-shadow:0 4px 12px rgba(45,90,61,0.08);
-      position:relative;
-      overflow:hidden;
-      transition: transform .32s ease, background .32s ease, box-shadow .32s ease, border-color .32s ease;
-      font-weight:600;
-      letter-spacing:0.2px;
-    }
-    .organic-nav a::before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:-120%;
-      width:40%;
-      height:100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-      transform: skewX(-20deg);
-      transition: left .6s cubic-bezier(.2,.9,.3,1);
-      pointer-events:none;
-    }
-    .organic-nav a:hover::before{
-      left:120%;
-    }
-    .organic-nav a:hover{
-      transform: translateY(-4px) scale(1.03);
-      background: var(--button-bg-hover);
-      box-shadow:0 12px 30px rgba(45,90,61,0.18);
-      border-color: var(--accent);
-      color: #08321a;
-    }
-    * { -webkit-tap-highlight-color: transparent; }
-    ::selection { background: rgba(160,230,194,0.0); color: inherit; }
-    a, button, input, textarea { outline: none; }
-    a:focus, button:focus, input:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px rgba(45,90,61,0.08); }
-    .organic-nav a:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(45,90,61,0.12); outline-offset:4px; }
-    @media (max-width:480px){
-      body { padding: 20px 16px; }
-      .organic-nav{ gap:12px; padding:18px; }
-      .organic-nav a{ padding:10px 18px; min-width:90px; font-size:15px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="centered-layout">
   <div class="container">
     <nav class="organic-nav" aria-label="AI links">
       <a href="https://venice.ai/" target="_blank" rel="noopener noreferrer">AI без цензуры</a>
