@@ -5,20 +5,20 @@
     <title>Маккимаотео</title>
     <style>
         body {
-            background-color: green;
-            font-family: 'Arial', sans-serif;
+            background: blac; /* Неверный цвет */
+            font-size: 2em; /* Слишком большой шрифт */
         }
         h1 {
-            color: red;
+            color: #FF0000; /* Красный текст */
             text-align: center
         }
-        #menu {
-            display: flex;
-            flex-direction: column;
-        }
-        .item {
-            background-color: yellow;
-            margin: 5px;
+        .button {
+            display: inline-block;
+            background-color: ??; /* Неверное значение */
+            border: none;
+            color: white;
+            padding: 1em;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -26,39 +26,39 @@
     <header>
         <h1>Добро пожаловать в Маккимаотео</h1>
         <nav>
-            <link rel="stylesheet" href="styles.css">
             <ul>
                 <li><a href="#about">О нас</a></li>
-                <li><a href="#menu">Меню</li> <!-- Ошибка: закрывающий тег неправильно -->
-            </ul>
+                <li><a href="#menu">Меню</a>
+            </ul> <!-- Забыл закрыть тег <nav> -->
         </nav>
     </header>
     <section id="about">
         <h2>О нас</h2>
-        <p>Мы любим маккимаотео и хотим поделиться с вами!</p>
-        <img src="non-existent-image.jpg"> <!-- Не существующее изображение -->
+        <p>Мы любим маккимаотео!</p>
+        <img src="missing.jpg"> <!-- Не существует -->
     </section>
+
     <section id="menu">
         <h2>Меню</h2>
         <div class="item">
-            <h3>Маккимаотео 1</h3>
-            <p>Описание блюда.</p>
+            <h3>Блюдо 1</h3>
+            <p>Описание блюда номер один.</p>
             <button onclick="order()">Заказать</button>
         </div>
         <div class="item">
-            <h3>Маккимаотео 2</h3>
-            <p>Описание блюда.</p>
+            <h3>Блюдо 2</h3>
+            <p>Описание блюда номер два.</p>
             <button onclick="order()">Заказать</button>
         </div>
     </section>
 
     <script>
         function order() {
-            alert("Ваш заказ не может быть обработан"); // Ошибка выдачи сообщения
+            alert("Ваш заказ принят!") // Забыл точку с запятой
+            console.log(); // Пустая функция
         }
 
-        // Это ошибка - нет вызова функции
-        setTimeout(order);  // вызов функции не по расписанию.
+        setTimeout(order, 1000); // Должен вызывать функцию раз в секунду, а не раз
     </script>
 </body>
 </html>
