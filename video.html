@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY RECOMMENDATIONS</title>
+    <!-- Подключаем шрифт Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- Основные стили --- */
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1f1f1f;
+            --text-main: #ffffff;
+            --text-sec: #aaaaaa;
+            --accent: #e50914; /* Красный как у Netflix */
+            --accent-hover: #ff1f2b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* --- Шапка (Hero Section) --- */
+        header {
+            height: 60vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bg-color)), 
+                        url('https://i.postimg.cc/vHppXM8Q/1764429132473.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: var(--text-sec);
+            max-width: 600px;
+        }
+
+        /* --- Контейнер --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- Секции --- */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+
+        /* --- Сетка карточек --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- Карточка --- */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            /* Убрали cursor: pointer и transition для transform/box-shadow */
+            aspect-ratio: 2/3;
+        }
+
+        /* Убрали блок .card:hover */
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1; /* Сделали картинку сразу полностью непрозрачной */
+            /* Убрали transition */
+        }
+
+        /* Убрали блок .card:hover .card-image */
+
+        /* Текст внутри карточки */
+        .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Скрыли иконку Play, так как она появлялась только при наведении */
+        .play-icon {
+            display: none; 
+        }
+
+        /* --- Футер --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-sec);
+            font-size: 0.9rem;
+            margin-top: 50px;
+            border-top: 1px solid #333;
+        }
+
+        /* --- Адаптивность --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kage<span style="color:var(--accent)">Kao</span></h1>
+        <p class="subtitle">Сериалы и мультсериалы которые я рекомендую посмотреть.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Секция Мультсериалы -->
+        <h2 class="section-title">Мультсериалы</h2>
+        <div class="grid" id="cartoons-grid">
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=1b6be0065a8e0aaed47bfb850f5ab26cefcadd33-4219539-images-thumbs&n=13" alt="Герои Энвелла" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Герои Энвелла</div>
+                    <div class="card-tag">Приключения</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=39357da2bbb8bace685497263db7cdd26f4f96ad-5859188-images-thumbs&n=13" alt="Царство Падальщиков" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Царство Падальщиков</div>
+                    <div class="card-tag">Sci-Fi</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=77854411c0ad92c14396c1235b4e8669d83e600b-4219714-images-thumbs&n=13" alt="Частые побочные явления" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Частые побочные явления</div>
+                    <div class="card-tag">Анимация</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=bedd786cc8c5d55f3dad1609273d07cf2b60a19b-5383000-images-thumbs&n=13" alt="Рик и Морти" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Рик и Морти</div>
+                    <div class="card-tag">Комедия / Sci-Fi</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=32a933a74cbcd9670e31cfb706fc88b283e79729-4825130-images-thumbs&n=13" alt="Гравити Фолз" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Гравити Фолз</div>
+                    <div class="card-tag">Мистика</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция Сериалы -->
+        <h2 class="section-title">Сериалы</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=f3b533098c09256031552f1c9efc6285_l-8496938-images-thumbs&ref=rim&n=13&w=366&h=500" alt="Декстер" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Декстер</div>
+                    <div class="card-tag">Триллер</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=ef7de681e1b24d784dd78be894b20b838a3266af-10310233-images-thumbs&n=13" alt="Мистер Робот" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Мистер Робот</div>
+                    <div class="card-tag">Драма / Хакеры</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=3df1566e4401b130487da486ab029ac4802dfcb2-7547218-images-thumbs&n=13" alt="Во все тяжкие" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Во все тяжкие</div>
+                    <div class="card-tag">Криминал</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=53261ea108fa0532243968e2ab6897bf499db9d7-9072244-images-thumbs&n=13" alt="Острые козырьки" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Острые козырьки</div>
+                    <div class="card-tag">Исторический</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=ef3e79e4a8d87267aa126278ccc446f1cc647adf-13457071-images-thumbs&n=13" alt="Пацаны" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Пацаны</div>
+                    <div class="card-tag">Экшн</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=b7d0dce4aa6f695ed2e2a422af0b2a5fef5d313a-16342529-images-thumbs&n=13" alt="Игра в кальмара" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Игра в кальмара</div>
+                    <div class="card-tag">Триллер</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=995748e60cbb81386b1214f71ab44f633a9b2df3-5496468-images-thumbs&n=13" alt="Настоящий детектив" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Настоящий детектив (1S)</div>
+                    <div class="card-tag">Детектив</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=8e7169f60f71e7626a386beb6c286ea56dfa9b6e-10843465-images-thumbs&n=13" alt="Ганнибал" class="card-image">
+                <div class="play-icon"></div>
+                <div class="card-info">
+                    <div class="card-title">Ганнибал</div>
+                    <div class="card-tag">Хоррор</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
