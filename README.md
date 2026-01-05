@@ -7,9 +7,12 @@
   <div align="center">
     <img src="https://gifdb.com/images/high/blade-runner-2049-ryan-gosling-snow-9h3v1lh2s9iq93xi.webp" width="100%">
   </div>
-            <li><a href="https://kage-kao.github.io/video">/favorite/video</a></li>
-            <li><a href="https://kage-kao.github.io/music">/favorit/music</a>
-</li>
+        <details>
+            <summary>🔻 <code>/favorites/</code></summary>
+            <br>
+            &nbsp;&nbsp;├─ <a href="https://kage-kao.github.io/video">video_recs.mp4</a><br>
+            &nbsp;&nbsp;└─ <a href="https://kage-kao.github.io/music">music_playlist.mp3</a>
+        </details>
 </details>
 
 
