@@ -7,5 +7,7 @@
   <div align="center">
     <img src="https://gifdb.com/images/high/blade-runner-2049-ryan-gosling-snow-9h3v1lh2s9iq93xi.webp" width="100%">
   </div>
+  video recommendations: https://kage-kao.github.io/video
+  favorite music: https://kage-kao.github.io/music
 </details>
 
