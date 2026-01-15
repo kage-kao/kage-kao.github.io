@@ -16,7 +16,7 @@
 <table style="border-collapse: collapse; border: none; margin: 0; padding: 0;">
 <tr style="background: none; border: none;">
 <td style="padding: 2px 8px 2px 0; border: none; font-family: monospace; color: #777; vertical-align: middle;">├──</td>
-<td style="padding: 2px 0; border: none; vertical-align: middle;"><a href="https://kage-kao.github.io/video" style="color: #4da6ff; text-decoration: none; text-shadow: 0 0 5px rgba(77, 166, 255, 0.4);">video_recs.mp4</a></td>
+<td style="padding: 0px 0; border: none; vertical-align: middle;"><a href="https://kage-kao.github.io/video" style="color: #4da6ff; text-decoration: none; text-shadow: 0 0 5px rgba(77, 166, 255, 0.4);">video_recs.mp4</a></td>
 </tr>
 <tr style="background: none; border: none;">
 <td style="padding: 2px 8px 2px 0; border: none; font-family: monospace; color: #777; vertical-align: middle;">└──</td>
