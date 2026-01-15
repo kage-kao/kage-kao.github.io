@@ -1,4 +1,4 @@
-<div align="center" onclick="document.getElementsByTagName('video')[0].muted=false;" style="min-height: 100vh; position: relative; z-index: 10; font-family: 'Courier New', Courier, monospace; color: #e0e0e0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none;">
+<div align="center" onclick="document.getElementsByTagName('video')[0].muted=false;" style="position: relative; z-index: 10; font-family: 'Courier New', Courier, monospace; color: #e0e0e0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none;">
 <div style="margin-bottom: 20px;">
 <img src="https://pomf2.lain.la/f/39sg6aqv.png" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; pointer-events: none; -webkit-user-drag: none;">
 <br>
@@ -11,7 +11,7 @@
 <img src="https://gifdb.com/images/high/blade-runner-2049-ryan-gosling-snow-9h3v1lh2s9iq93xi.webp" width="100%" style="background: none !important; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 15px rgba(0,0,0,0.5); pointer-events: none; -webkit-user-drag: none;">
 </div>
 <details onclick="document.getElementsByTagName('video')[0].muted=false;">
-<summary onclick="document.getElementsByTagName('video')[0].muted=false;" style="cursor: pointer; color: #aaa;">🔻 <code>/favorites/data</code></summary>
+<summary onclick="document.getElementsByTagName('video')[0].muted=false;" style="cursor: pointer; color: #aaa;">🔻 <code>/favorites/</code></summary>
 <div style="margin-top: 15px; display: inline-block; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px;">
 <table style="border-collapse: collapse; border: none; margin: 0; padding: 0;">
 <tr style="background: none; border: none;">
