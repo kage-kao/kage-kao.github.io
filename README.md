@@ -1,4 +1,4 @@
-<div align="center" oncontextmenu="return false;" ondragstart="return false;" style="position: relative; z-index: 10; font-family: 'Courier New', Courier, monospace; color: #e0e0e0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none;">
+<div align="center" oncontextmenu="return false;" ondragstart="return false;" onclick="const v=document.querySelector('video'); if(v){v.muted=false; v.volume=1;}" style="position: relative; z-index: 10; font-family: 'Courier New', Courier, monospace; color: #e0e0e0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none;">
 <div style="margin-bottom: 20px;">
 <img src="https://pomf2.lain.la/f/39sg6aqv.png" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; pointer-events: none; -webkit-user-drag: none;">
 <br>
