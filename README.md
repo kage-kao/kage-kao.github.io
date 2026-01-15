@@ -11,10 +11,10 @@
 <img src="https://gifdb.com/images/high/blade-runner-2049-ryan-gosling-snow-9h3v1lh2s9iq93xi.webp" width="100%" style="background: none !important; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 15px rgba(0,0,0,0.5);">
 </div>
 <details>
-<summary style="cursor: pointer; color: #aaa;">🔻 <code>/favorites/data</code></summary>
+<summary style="cursor: pointer; color: #aaa;">🔻 <code>/favorites/data/</code></summary>
 <div style="margin-top: 15px; text-align: left; display: inline-block; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px;">
 &nbsp;├─ <a href="https://kage-kao.github.io/video" style="color: #4da6ff; text-decoration: none; text-shadow: 0 0 5px rgba(77, 166, 255, 0.4);">video_recs.mp4</a><br>
-&nbsp;└─ <a href="https://kage-kao.github.io/music" style="color: #ff79c6; text-decoration: none; text-shadow: 0 0 5px rgba(255, 121, 198, 0.4);">music_playlist.mp3</a>
+&nbsp; └─ <a href="https://kage-kao.github.io/music" style="color: #ff79c6; text-decoration: none; text-shadow: 0 0 5px rgba(255, 121, 198, 0.4);">music_playlist.mp3</a>
 </div>
 </details>
 </details>
