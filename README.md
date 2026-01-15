@@ -11,7 +11,7 @@
 <img src="https://gifdb.com/images/high/blade-runner-2049-ryan-gosling-snow-9h3v1lh2s9iq93xi.webp" width="100%" style="background: none !important; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 15px rgba(0,0,0,0.5); pointer-events: none; -webkit-user-drag: none;">
 </div>
 <details onclick="document.getElementsByTagName('video')[0].muted=false;">
-<summary onclick="document.getElementsByTagName('video')[0].muted=false;" style="cursor: pointer; color: #aaa;">🔻 <code>/favorites/</code></summary>
+<summary onclick="document.getElementsByTagName('video')[0].muted=false;" style="cursor: pointer; color: #aaa;">🔻 <code>/favorites/data</code></summary>
 <div style="margin-top: 15px; display: inline-block; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px;">
 <table style="border-collapse: collapse; border: none; margin: 0; padding: 0;">
 <tr style="background: none; border: none;">
@@ -27,7 +27,6 @@
 </details>
 </details>
 </div>
-
 </div>
 <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #050505; overflow: hidden; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;" onclick="document.getElementsByTagName('video')[0].muted=false;">
 <video src="https://pomf2.lain.la/f/ejh1921.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; opacity: 0.6; filter: contrast(1.1) brightness(0.9); -webkit-user-drag: none;"></video>
