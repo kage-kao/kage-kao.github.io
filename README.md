@@ -15,6 +15,10 @@
         </details>
 </details>
 
-<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #000;" onclick="const v=this.querySelector('video'); v.muted=false; v.volume=1;">
-<video src="https://pomf2.lain.la/f/ejh1921.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+<style>
+/* Принудительно поднимаем контент над видео */
+details, img, a, summary, p { position: relative; z-index: 10; }
+</style>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #000; overflow: hidden;" onclick="const v=this.querySelector('video'); v.muted=false; v.volume=1;">
+<video src="https://pomf2.lain.la/f/ejh1921.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; opacity: 0.8;"></video>
 </div>
