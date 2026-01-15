@@ -15,7 +15,6 @@
         </details>
 </details>
 
-<div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;">
-<div style="width: 100%; height: 100%; pointer-events: auto; cursor: pointer;" onclick="var v=this.nextElementSibling; v.muted=false; v.volume=1;"></div>
-<video src="https://pomf2.lain.la/f/ejh1921.mp4" autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; pointer-events: none;"></video>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #000;" onclick="const v=this.querySelector('video'); v.muted=false; v.volume=1;">
+<video src="https://pomf2.lain.la/f/ejh1921.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
 </div>
