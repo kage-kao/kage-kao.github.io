@@ -29,5 +29,5 @@
 </div>
 </div>
 <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #050505; overflow: hidden; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;" onclick="document.getElementsByTagName('video')[0].muted=false;">
-<video src="https://pomf2.lain.la/f/ejh1921.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; opacity: 0.6; filter: contrast(1.1) brightness(0.9); -webkit-user-drag: none;"></video>
+<video src="https://pomf2.lain.la/f/1q7dyo3y.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; opacity: 0.6; filter: contrast(1.1) brightness(0.9); -webkit-user-drag: none;"></video>
 </div>
