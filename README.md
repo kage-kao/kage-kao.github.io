@@ -2,7 +2,7 @@
 <div style="margin-bottom: 20px;">
 <img src="https://leopard.hosting.pecon.us/dl/ornvi/mrrobot.png" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; pointer-events: none; -webkit-user-drag: none;">
 <br>
-<img src="https://leopard.hosting.pecon.us/dl/kbcte/1773924941967.png" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; opacity: 0.8; pointer-events: none; -webkit-user-drag: none;">
+<img src="" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; opacity: 0.8; pointer-events: none; -webkit-user-drag: none;">
 </div>
 
 <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #050505; overflow: hidden; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;" onclick="document.getElementsByTagName('video')[0].muted=false;">
