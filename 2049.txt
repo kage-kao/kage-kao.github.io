@@ -63,14 +63,4 @@ tg.xbs54as9c6.ru
 hysteria2://8d7032fa-47e2-40b9-86ee-0072b23feff8@91.218.245.82:443/?insecure=1&sni=live.ok.ru#timeweb-gaming-h2-0-fulltunnel
 tg.xbs54as9c6.ru
 
-hysteria2://strong-secret-pass-777@2.56.172.83:444?insecure=1&sni=www.microsoft.com&obfs=salamander&obfs-password=cry_me_a_r1ver_2026#⭐ 🇷🇸 Belgrade | HY2
-hysteria2://strong-secret-pass-777@94.131.101.19:444?insecure=1&sni=www.microsoft.com&obfs=salamander&obfs-password=cry_me_a_r1ver_2026#⭐ 🇺🇸 New York | HY2
-vless://e033ef6e-ab4b-47d4-a523-ff568d2c8dbb@2.56.172.83:8443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=tradingview.com&fp=chrome&pbk=TH8C9sgNuMRVR3o5QehXPgYw8PWjoHrH2rVQF4JWwGI&type=tcp#⭐ 🇷🇸 Belgrade | VLESS
-tuic://e033ef6e-ab4b-47d4-a523-ff568d2c8dbb:strong-secret-pass-777@2.56.172.83:50043?congestion_control=bbr&alpn=h3&allow_insecure=1#⭐ 🇷🇸 Belgrade | TUIC
-vless://e033ef6e-ab4b-47d4-a523-ff568d2c8dbb@45.15.140.128:8443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=tradingview.com&fp=chrome&pbk=TH8C9sgNuMRVR3o5QehXPgYw8PWjoHrH2rVQF4JWwGI&type=tcp#⭐ 🇳🇿 Wellington | VLESS
-
-vless://68e48518-273b-4420-81be-957fe526567f@185.121.235.85:20902/?type=tcp&encryption=none&security=reality&pbk=oPoM6zSCgbFE7sCOHmnLS62d7DA4AabdRDfo32m-JUY&fp=chrome&sni=vk.ru&sid=89&spx=%2F#Premium%20Amsterdam%204%20NL
 vless://99a9b863-270f-423a-9a34-84da43f5285a@144.31.230.204:23831/?type=tcp&encryption=none&security=reality&pbk=3xRN-fHKaOEM7oQb2OaCUMAFOeewLvdn6u8W6mFYWjQ&fp=chrome&sni=yandex.ru&sid=1166af&spx=%2F#Premium%20Stockholm%204%20SE
-vless://c23ad661-aa94-4d13-a183-59f359b6a1d5@31.13.208.161:28067/?type=tcp&encryption=none&security=reality&pbk=rvnwEuYMKCmb1nGCXuJINiHNyjoiishhyEnAtjqOmm4&fp=chrome&sni=yandex.ru&sid=ea16&spx=%2F#Premium%20Helsinki%202%20FI
-vless://dfd8bf7a-fe85-444e-b4e0-8e0cadbced11@87.120.187.199:57439/?type=tcp&encryption=none&security=reality&pbk=Z-PIWIqx0SE0w4rqSm8_IO-kZ9BvXm7AqpsHKP51EhI&fp=chrome&sni=vk.ru&sid=3e&spx=%2F#Premium%20Frankfurt%201%20DE
-vless://c5291d2a-b015-43da-ab7c-3345ec2c4a56@144.31.47.116:53241/?type=tcp&encryption=none&security=reality&pbk=zJrsvTmXbQHGCqSHBxCnpRlrwxJiO0XTP2gwE6QBoB0&fp=chrome&sni=www.intel.com&sid=f88a44&spx=%2F#Premium%20Helsinki%201%20FI
