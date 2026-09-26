@@ -1,6 +1,6 @@
 <div align="center" onclick="document.getElementsByTagName('video')[0].muted=false;" style="position: relative; z-index: 10; font-family: 'Courier New', Courier, monospace; color: #e0e0e0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none;">
 <div style="margin-bottom: 20px;">
-<img src="https://leopard.hosting.pecon.us/dl/ornvi/mrrobot.png" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; pointer-events: none; -webkit-user-drag: none;">
+<img src="" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; pointer-events: none; -webkit-user-drag: none;">
 <br>
 <img src="" style="background: none !important; border: none !important; box-shadow: none !important; max-width: 100%; opacity: 0.8; pointer-events: none; -webkit-user-drag: none;">
 </div>
