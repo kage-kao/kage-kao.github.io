@@ -9,7 +9,7 @@
 <a href="https://vk.com/kagekao0o" target="_blank" style="color: #e0e0e0; text-decoration: none; border-bottom: 1px dotted #e0e0e0;">{vk}</a>
 <a href="https://twitch.tv/kagekao0o" target="_blank" style="color: #e0e0e0; text-decoration: none; border-bottom: 1px dotted #e0e0e0;">{twitch}</a>
 <a href="https://youtube.com/@kagekao0o0" target="_blank" style="color: #e0e0e0; text-decoration: none; border-bottom: 1px dotted #e0e0e0;">{youtube}</a>
-<a href="https://t.me/kagekao0o?direct" target="_blank" style="color: #e0e0e0; text-decoration: none; border-bottom: 1px dotted #e0e0e0;">{tg-direct}</a>
+<a href="https://t.me/kagekao0o" target="_blank" style="color: #e0e0e0; text-decoration: none; border-bottom: 1px dotted #e0e0e0;">{telegram}</a>
 <a href="https://yoomoney.ru/fundraise/1KHMDJ68JI3.260926" target="_blank" style="color: #e0e0e0; text-decoration: none; border-bottom: 1px dotted #e0e0e0;">{donat}</a>
 </div>
 
